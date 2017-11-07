@@ -1260,3 +1260,8 @@ initializr:
       id: 1.1.12.RELEASE
       default: false
 
+security:
+    user:
+      name: admin
+      password: changdaye
+
