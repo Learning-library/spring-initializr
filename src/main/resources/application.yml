@@ -1,8 +1,8 @@
 logging:
   level:
-    org.springframework.core.env: warn
-    org.springframework.jndi: warn
-
+    org.springframework.core.env: debug
+    org.springframework.jndi: debug
+    root: debug
 server:
   compression:
     enabled: true
