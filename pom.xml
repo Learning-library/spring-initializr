@@ -99,7 +99,7 @@
             <name>Team Nexus Repository</name>
             <url>http://nexus.jetbrains.org.cn/repository/maven-public/</url>
             <snapshots>
-                <enabled>false</enabled>
+                <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
             </snapshots>
         </repository>
