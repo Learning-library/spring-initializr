@@ -9,13 +9,13 @@
         </encoder>
     </appender>
 
-    <appender name="logstash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
-        <!--<param name="Encoding" value="UTF-8"/>-->
-        <remoteHost>127.0.0.1</remoteHost>
-        <port>5000</port>
-        <!-- encoder is required -->
-        <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
-    </appender>
+    <!--<appender name="logstash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">-->
+    <!--&lt;!&ndash;<param name="Encoding" value="UTF-8"/>&ndash;&gt;-->
+    <!--<remoteHost>127.0.0.1</remoteHost>-->
+    <!--<port>5000</port>-->
+    <!--&lt;!&ndash; encoder is required &ndash;&gt;-->
+    <!--<encoder class="net.logstash.logback.encoder.LogstashEncoder"/>-->
+    <!--</appender>-->
 
     <root level="DEBUG">
         <appender-ref ref="logstash"/>
