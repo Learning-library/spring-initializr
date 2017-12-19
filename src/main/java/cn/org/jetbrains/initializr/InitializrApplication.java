@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class InitializrApplication {
 
     public static void main(String[] args) {
-        //dev 合并到 master test dev
+        //dev 合并到 master test master
         SpringApplication.run(InitializrApplication.class, args);
     }
 }
