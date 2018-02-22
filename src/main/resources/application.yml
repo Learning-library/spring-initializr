@@ -2,7 +2,7 @@ logging:
   level:
     org.springframework.core.env: debug
     org.springframework.jndi: debug
-    root: debug
+    root: info
 server:
   compression:
     enabled: true

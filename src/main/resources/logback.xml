@@ -15,9 +15,9 @@
     <appender name="loghubAppender1" class="com.aliyun.openservices.log.logback.LoghubAppender">
         <!--必选项-->
         <!-- 账号及网络配置 -->
-        <endpoint>cn-beijing.log.aliyuncs.com</endpoint>
-        <accessKeyId>xxxx</accessKeyId>
-        <accessKey>xxxx</accessKey>
+        <endpoint>cn-beijing-intranet.log.aliyuncs.com</endpoint>
+        <accessKeyId>xxx</accessKeyId>
+        <accessKey>xxx</accessKey>
 
         <!-- sls 项目配置 -->
         <projectName>start-jetbrains-org-cn</projectName>
@@ -35,9 +35,9 @@
         <retryTimes>3</retryTimes>
         <maxIOThreadSizeInPool>8</maxIOThreadSizeInPool>
 
-        <filter class="ch.qos.logback.classic.filter.ThresholdFilter"><!-- 打印WARN,ERROR级别的日志 -->
-            <level>INFO</level>
-        </filter>
+        <!--<filter class="ch.qos.logback.classic.filter.ThresholdFilter">&lt;!&ndash; 打印WARN,ERROR级别的日志 &ndash;&gt;-->
+        <!--<level>INFO</level>-->
+        <!--</filter>-->
     </appender>
 
 
@@ -50,10 +50,11 @@
     </appender>
 
     <root level="DEBUG">
-        <appender-ref ref="logstash"/>
-        <appender-ref ref="loghubAppender1"/>
+        <appender-ref ref="Console"/>
+
     </root>
     <root level="INFO">
-        <appender-ref ref="Console"/>
+        <appender-ref ref="logstash"/>
+        <appender-ref ref="loghubAppender1"/>
     </root>
 </configuration>
