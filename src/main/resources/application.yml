@@ -18,8 +18,20 @@ spring:
       strategy:
         content:
           enabled: true
-
 initializr:
+  boot-versions:
+    - name: 1.5.10
+      id: 1.5.10.RELEASE
+      default: true
+    - name: 1.5.11(SNAPSHOT)
+      id: 1.5.11.BUILD-SNAPSHOT
+      default: false
+    - name: 2.0.0
+      id: 2.0.0.RELEASE
+      default: false
+    - name: 2.0.1(SNAPSHOT)
+      id: 2.0.1.BUILD-SNAPSHOT
+      default: false
   group-id:
     value: cn.org.jetbrains
     description: mrchang's  own spring initializr project
