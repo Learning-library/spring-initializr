@@ -120,7 +120,38 @@ initializr:
       dependency-management-plugin-version: 0.6.0.RELEASE
     kotlin:
       version: 1.1.51
+    repositories:
+      nexus:
+        name: Team Nexus Repository
+        url: http://nexus.jetbrains.org.cn/nexus/content/groups/public
+        snapshots-enabled: true
   dependencies:
+    - name: Common
+      content:
+        - name: Logging
+          groupId: org.hswebframework.web
+          artifactId: hsweb-access-logging-aop
+          version: 3.0-SNAPSHOT
+          description: 日志处理（https://github.com/hs-web/hsweb-framework/wiki/logging）
+          repository: nexus
+        - name: Swagger
+          groupId: com.spring4all
+          artifactId: spring-boot-starter-swagger
+          version: 1.5.1.RELEASE
+          description: 接口文档处理（https://github.com/SpringForAll/spring-boot-starter-swagger）
+          repository: nexus
+        - name: Utils
+          groupId: org.hswebframework
+          artifactId: hsweb-utils
+          version: 3.0.2
+          description: 常用工具类 （https://github.com/hs-web/hsweb-utils）
+          repository: nexus
+        - name: Cloud Storage
+          groupId: cn.org.jetbrains
+          artifactId: cloudstorage
+          version: 1.0.1
+          description: 常用云存储（https://github.com/changdaye/cloudstorage）
+          repository: nexus
     - name: Core
       content:
         - name: Security
