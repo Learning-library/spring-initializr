@@ -3,7 +3,7 @@ spring:
     name: my-initializr
   cloud:
     config:
-      uri: http://101.201.237.117:8085/
+      uri: http://config-server-git.jetbrains.org.cn
       profile: default
       label: master
 
