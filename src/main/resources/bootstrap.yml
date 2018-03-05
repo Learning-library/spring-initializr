@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: my-initializr
+  cloud:
+    config:
+      uri: http://101.201.237.117:8085/
+      profile: default
+      label: master
+
+

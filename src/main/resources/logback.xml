@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
+
+    <springProperty scope="context" name="accessKeyId" source="log.aliyun.accessKeyId" defaultValue="xxxx"/>
+    <springProperty scope="context" name="accessKey" source="log.aliyun.accessKey" defaultValue="xxxx"/>
+    <springProperty scope="context" name="endpoint" source="log.aliyun.endpoint" defaultValue="xxxx"/>
+
+
     <!-- 控制台输出日志 -->
     <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
         <!-- encoders are  by default assigned the type
@@ -12,12 +18,12 @@
     <!--为了防止进程退出时，内存中的数据丢失，请加上此选项-->
     <shutdownHook class="ch.qos.logback.core.hook.DelayingShutdownHook"/>
 
-    <appender name="loghubAppender1" class="com.aliyun.openservices.log.logback.LoghubAppender">
+    <appender name="alilog" class="com.aliyun.openservices.log.logback.LoghubAppender">
         <!--必选项-->
         <!-- 账号及网络配置 -->
-        <endpoint>cn-beijing-intranet.log.aliyuncs.com</endpoint>
-        <accessKeyId>xxx</accessKeyId>
-        <accessKey>xxx</accessKey>
+        <endpoint>${endpoint}</endpoint>
+        <accessKeyId>${accessKeyId}</accessKeyId>
+        <accessKey>${accessKey}</accessKey>
 
         <!-- sls 项目配置 -->
         <projectName>start-jetbrains-org-cn</projectName>
@@ -55,6 +61,6 @@
     </root>
     <root level="INFO">
         <appender-ref ref="logstash"/>
-        <appender-ref ref="loghubAppender1"/>
+        <appender-ref ref="alilog"/>
     </root>
 </configuration>
