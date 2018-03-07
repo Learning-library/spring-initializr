@@ -1,5 +1,0 @@
-log:
-  aliyun:
-    accessKeyId: xxxx
-    accessKey: xxxx
-    endpoint: cn-beijing-intranet.log.aliyuncs.com
