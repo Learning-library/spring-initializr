@@ -13,6 +13,12 @@ public class InitializrApplication {
         SpringApplication.run(InitializrApplication.class, args);
     }
 
+    /**
+     * 去除自动去spring-boot官网拉取最新版本问题
+     *
+     * @param properties
+     * @return
+     */
     @Bean
     public InitializrMetadataProvider initializrMetadataProvider(
             InitializrProperties properties) {
