@@ -14,7 +14,7 @@ public class InitializrApplication {
     }
 
     /**
-     * 去除自动去spring-boot官网拉取最新版本问题
+     * 去除自动去spring-boot官网拉取最新版本问题。
      *
      * @param properties
      * @return
