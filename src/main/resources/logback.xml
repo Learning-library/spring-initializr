@@ -10,10 +10,6 @@
         </encoder>
     </appender>
 
-    <root level="DEBUG">
-        <appender-ref ref="Console"/>
-
-    </root>
     <root level="INFO">
         <appender-ref ref="Console"/>
     </root>
